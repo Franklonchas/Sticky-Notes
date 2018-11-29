@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .note {
+            background-color: yellow;
+            width: 450px;
+            height: 200px;
+        }
+
+        .title {
+            text-align: center;
+            color: red;
+        }
+        .text{
+            text-align: center;
+        }
+        .date{
+            text-align: center;
+        }
+        #Bborrar{
+            align-content: center;
+        }
+        #change{
+            visibility: hidden;
+        }
+        #panel{
+            background-image: url("background.jpg");
+        }
+        .formato{
+            font-size: 25px;
+        }
+    </style>
+</head>
+<body id="panel" onload="cargarNotas()">
+<div id="formulario">
+    <label class="formato"> Introduce el titulo</label>
+    <input type="text" id="titulo">
+    <label class="formato">Introduce el recordatorio</label>
+    <textarea id="texto"></textarea>
+    <input type="button" value="crear" onclick="crearNotas()">
+</div>
+
+<div id="change">
+    <label class="formato"> Cambiar el titulo</label>
+    <input type="text" id="titulo2">
+    <label class="formato">Cambiar el recordatorio</label>
+    <textarea id="texto2"></textarea>
+    <input type="button" value="cambiar" onclick="modificar()">
+</div>
+
+</body>
+<script src="modelo.js"></script>
+</html>
